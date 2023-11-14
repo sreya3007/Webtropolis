@@ -1,0 +1,115 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   height: 100vh;
+   width: 100%;
+   background-color: fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container {
+   padding: 30px;
+   display: flex;
+   flex-direction: row;
+   height: 70vh;
+   width: 50%;
+   /* border: 2px solid black; */
+   border-radius: 20px;
+   box-shadow: 1px 1px 20px black;
+}
+
+.inner-container {
+   width: 50%;
+}
+
+.login-text {
+   font-family: "Agbalumo";
+   font-size: 45px;
+   font-weight: 500;
+   text-align: center;
+}
+
+.signup-text {
+   font-size: 45px;
+   font-weight: 500;
+   font-family: "Agbalumo";
+   text-align: center;
+   padding-bottom: 40px;
+}
+
+.signup-icons {
+   margin-bottom: 50px;
+}
+
+.signup-icons span i {
+   position: relative;
+   left: 80px;
+   font-size: 15px;
+   margin: 5px;
+   padding: 15px;
+   /* border: 1px solid black; */
+   box-shadow: 1px 1px 5px black;
+   border-radius: 50%;
+}
+
+.use-your-email {
+   text-align: center;
+}
+
+#signup-email {
+   width: 70%;
+   height: 3rem;
+}
+
+#signup-password {
+   width: 80%;
+}
+
+.signin-text {
+   font-family: "Roboto", sans-serif;
+}
+
+/* -----------------login button--------------------------------------------------------------------------------------- */
+.button-38 {
+   color: #fff;
+   padding: 15px 25px;
+   border-radius: 14px;
+   font-weight: bold;
+   font-size: 16px;
+   border: 0;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   cursor: pointer;
+   box-shadow: rgba(255, 255, 255, 0.1) -3px -3px 9px inset,
+      rgba(255, 255, 255, 0.15) 0 3px 9px inset,
+      rgba(255, 255, 255, 0.6) 0 1px 1px inset,
+      rgba(0, 0, 0, 0.3) 0 -8px 36px inset,
+      rgba(255, 255, 255, 0.6) 0 1px 5px inset, rgba(0, 0, 0, 0.2) 2px 19px 31px;
+   background-color: #7f00ff;
+   background-image: radial-gradient(
+         93% 87% at 87% 89%,
+         rgba(0, 0, 0, 0.23) 0,
+         transparent 86.18%
+      ),
+      radial-gradient(
+         66% 66% at 26% 20%,
+         rgba(255, 255, 255, 0.55) 0,
+         rgba(255, 255, 255, 0) 69.79%,
+         rgba(255, 255, 255, 0) 100%
+      );
+   transition: all 150ms ease-in-out;
+}
+.button-38:hover {
+   filter: brightness(1.05);
+}
+.button-38:active {
+   transform: scale(0.95);
+}
+/* -----------------login button------------------------------------------------------------------------------------- */
