@@ -10,7 +10,5 @@ submitBtn.addEventListener("click",async ()=>{
 });
 
 async function submitForm(){
-    
 alert("yayyy!! new account created");
-
 }
