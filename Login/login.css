@@ -21,22 +21,23 @@ body {
    width: 50%;
    /* border: 2px solid black; */
    border-radius: 20px;
-   box-shadow: 1px 1px 20px black;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .inner-container {
    width: 50%;
+   border: 2px solid black;
 }
 
 .login-text {
    font-family: "Agbalumo";
-   font-size: 45px;
+   font-size: 40px;
    font-weight: 500;
    text-align: center;
 }
 
 .signup-text {
-   font-size: 45px;
+   font-size: 40px;
    font-weight: 500;
    font-family: "Agbalumo";
    text-align: center;
@@ -54,26 +55,57 @@ body {
    margin: 5px;
    padding: 15px;
    /* border: 1px solid black; */
-   box-shadow: 1px 1px 5px black;
+   box-shadow: 0 0 3px black;
    border-radius: 50%;
 }
 
 .use-your-email {
    text-align: center;
+   margin-bottom: 10px;
 }
 
 #signup-email {
-   width: 70%;
-   height: 3rem;
+   width: 80%;
+   height: 2.7rem;
+   margin-bottom: 15px;
+   background-color: rgb(219, 208, 208);
+   margin-left: 30px;
 }
 
 #signup-password {
    width: 80%;
+   height: 2.7rem;
+   margin-bottom: 15px;
+   background-color: rgb(219, 208, 208);
+   margin-left: 30px;
+}
+
+#signup-name {
+   width: 80%;
+   height: 2.7rem;
+   margin-bottom: 15px;
+   background-color: rgb(219, 208, 208);
+   margin-left: 30px;
+}
+
+#login-button {
+   position: relative;
+}
+
+#signup-button {
+   position: relative;
+   left: 120px;
 }
 
 .signin-text {
    font-family: "Roboto", sans-serif;
 }
+
+/* ---------------hover effects--------------- */
+.signup-icons:hover {
+   box-shadow: 1px 1px 10px solid;
+}
+/* ---------------hover effects--------------- */
 
 /* -----------------login button--------------------------------------------------------------------------------------- */
 .button-38 {
