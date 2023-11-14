@@ -1,8 +1,9 @@
 
-const express=require("express");
-const app=express();
-const port=8080;
+const express= require("express");
+const app= express();
+const port= 8080;
 const path= require("path");
+const mongoose=require("mongoose");
 //const Login = require("./backend/models/loginDB");
 
 const SignUp = require("./backend/models/loginDB");
@@ -21,15 +22,21 @@ app.get("/login",(req,res)=>{
 
 app.post("/login", (req, res)=> {
     const { email, password} = req.body;
-    User.findOne({ email: email}, (data) => {
+    let info=req.body;
+    User.findOne({ email: info.email}, (data) => {
+        if(!info.email.length || !info.password.length){
+res.send("enter the required information")
+        }
+        else{
         if(data){
-            if(password === data.password ) {
+            if(data.password === info.password ) {
                 res.send("Login Successfull");
             } else {
                 res.send("Incorrect Password");
             }
         } else {
             res.send("You are not register!!Please register first");
+        }
         }
     });
 }) ;
@@ -39,15 +46,23 @@ app.get("/register",(req,res)=>{
     });
 
 app.post("/register", (req, res)=> {
-    const { name, email, password} = req.body;
-    User.findOne({email: email}, (data) => {
+    const { name, email, password ,confPassword} = req.body;
+    let details=req.body;
+
+    if(!details.email.length || !details.password.length ||!details.password.length){
+        res.send("enter the required details")
+    }
+    else{
+    if(details.password==details.confPassword){
+    User.findOne({email: details.email}, (data) => {
         if(data){
             res.send("User already registered");
-        } else {
+        }
+            else {
             const user = new SignUp({
-                name:name,
-                email:email,
-                password:password
+                name:details.name,
+                email:details.email,
+                password:details.password
             })
             user.save()
                 .then((res)=>{
@@ -58,7 +73,12 @@ app.post("/register", (req, res)=> {
                 });
         }
     });
+}
     
+else{
+    res.send("You re-entured a different password");
+}
+}
 }) ;
 
 app.listen(port,()=>{
