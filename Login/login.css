@@ -1,0 +1,275 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   height: 100vh;
+   width: 100%;
+   background-color: fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container {
+   padding: 30px;
+   display: flex;
+   flex-direction: row;
+   height: 70vh;
+   width: 50%;
+   background-color: rgba(255, 255, 255, 0.3);
+   /* border: 2px solid black; */
+   border-radius: 20px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+}
+
+.back-video {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   z-index: -2;
+}
+
+@media (min-aspect-ratio: 16/9) {
+   .back-video {
+      width: 100%;
+      height: auto;
+   }
+}
+@media (max-aspect-ratio: 16/9) {
+   .back-video {
+      width: auto;
+      height: 100%;
+   }
+}
+
+.inner-container {
+   width: 50%;
+   border: 2px solid black;
+}
+
+.login-text {
+   font-family: "Agbalumo";
+   font-size: 40px;
+   font-weight: 500;
+   text-align: center;
+   color: white;
+   -webkit-text-stroke: 1.5px black;
+   text-shadow: 2px black;
+}
+
+.signup-text {
+   font-size: 40px;
+   font-weight: 500;
+   font-family: "Agbalumo";
+   text-align: center;
+   padding-top: 20px;
+   padding-bottom: 40px;
+   color: white;
+   -webkit-text-stroke: 1.5px black;
+   text-shadow: 2px black;
+}
+
+.signup-icons {
+   margin-bottom: 50px;
+}
+
+.signup-icons span i {
+   position: relative;
+   left: 80px;
+   font-size: 15px;
+   margin: 5px;
+   padding: 15px;
+   /* border: 1px solid black; */
+   box-shadow: 0 0 3px black;
+   border-radius: 50%;
+}
+
+.use-your-email {
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+#signup-email {
+   width: 80%;
+   height: 2.7rem;
+   margin-bottom: 15px;
+   background: linear-gradient(
+      90deg,
+      rgba(183, 127, 239, 1) 0%,
+      rgba(255, 255, 255, 1) 100%,
+      rgba(255, 255, 255, 1) 100%,
+      rgba(255, 255, 255, 1) 100%,
+      rgba(255, 255, 255, 1) 100%
+   );
+   margin-left: 30px;
+}
+
+#signup-password {
+   width: 80%;
+   height: 2.7rem;
+   margin-bottom: 15px;
+   background: linear-gradient(
+      90deg,
+      rgba(183, 127, 239, 1) 0%,
+      rgba(255, 255, 255, 1) 100%,
+      rgba(255, 255, 255, 1) 100%,
+      rgba(255, 255, 255, 1) 100%,
+      rgba(255, 255, 255, 1) 100%
+   );
+   margin-left: 30px;
+}
+
+#signup-name {
+   width: 80%;
+   height: 2.7rem;
+   margin-bottom: 15px;
+   background: linear-gradient(
+      90deg,
+      rgba(183, 127, 239, 1) 0%,
+      rgba(255, 255, 255, 1) 100%,
+      rgba(255, 255, 255, 1) 100%,
+      rgba(255, 255, 255, 1) 100%,
+      rgba(255, 255, 255, 1) 100%
+   );
+   margin-left: 30px;
+}
+
+#login-button {
+   position: relative;
+}
+
+#signup-button {
+   position: relative;
+   left: 120px;
+}
+
+.login-text {
+   font-size: 40px;
+   font-weight: 500;
+   font-family: "Agbalumo";
+   text-align: center;
+   padding-top: 20px;
+   padding-bottom: 40px;
+}
+
+.login-icons span i {
+   position: relative;
+   left: 80px;
+   font-size: 15px;
+   margin: 5px;
+   padding: 15px;
+   /* border: 1px solid black; */
+   box-shadow: 0 0 3px black;
+   border-radius: 50%;
+   color: white;
+}
+
+.use-your-account {
+   text-align: center;
+   margin-top: 50px;
+   margin-bottom: 10px;
+}
+
+#login-email {
+   width: 80%;
+   height: 2.7rem;
+   margin-bottom: 15px;
+   background: linear-gradient(
+      90deg,
+      rgba(183, 127, 239, 1) 0%,
+      rgba(255, 255, 255, 1) 100%,
+      rgba(255, 255, 255, 1) 100%,
+      rgba(255, 255, 255, 1) 100%,
+      rgba(255, 255, 255, 1) 100%
+   );
+   margin-left: 30px;
+}
+
+#login-password {
+   width: 80%;
+   height: 2.7rem;
+   margin-bottom: 15px;
+   background: linear-gradient(
+      90deg,
+      rgba(183, 127, 239, 1) 0%,
+      rgba(255, 255, 255, 1) 100%,
+      rgba(255, 255, 255, 1) 100%,
+      rgba(255, 255, 255, 1) 100%,
+      rgba(255, 255, 255, 1) 100%
+   );
+   margin-left: 30px;
+}
+
+.forget-password {
+   position: relative;
+   left: 80px;
+}
+
+#login-button {
+   position: relative;
+   left: 120px;
+   margin-top: 35px;
+}
+
+ {
+   #login-email,
+   #login-password,
+   #signup-name,
+   #signup-email,
+   #signup-password;
+}
+::placeholder {
+   font-weight: 600;
+   padding-left: 20px;
+   color: black;
+}
+
+/* ---------------hover effects--------------- */
+.signup-icons:hover {
+   box-shadow: 1px 1px 10px solid;
+}
+/* ---------------hover effects--------------- */
+
+/* -----------------login button--------------------------------------------------------------------------------------- */
+.button-38 {
+   color: #fff;
+   padding: 15px 25px;
+   border-radius: 14px;
+   font-weight: bold;
+   font-size: 16px;
+   border: 0;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   cursor: pointer;
+   box-shadow: rgba(255, 255, 255, 0.1) -3px -3px 9px inset,
+      rgba(255, 255, 255, 0.15) 0 3px 9px inset,
+      rgba(255, 255, 255, 0.6) 0 1px 1px inset,
+      rgba(0, 0, 0, 0.3) 0 -8px 36px inset,
+      rgba(255, 255, 255, 0.6) 0 1px 5px inset, rgba(0, 0, 0, 0.2) 2px 19px 31px;
+   background-color: #7f00ff;
+   background-image: radial-gradient(
+         93% 87% at 87% 89%,
+         rgba(0, 0, 0, 0.23) 0,
+         transparent 86.18%
+      ),
+      radial-gradient(
+         66% 66% at 26% 20%,
+         rgba(255, 255, 255, 0.55) 0,
+         rgba(255, 255, 255, 0) 69.79%,
+         rgba(255, 255, 255, 0) 100%
+      );
+   transition: all 150ms ease-in-out;
+}
+.button-38:hover {
+   filter: brightness(1.05);
+}
+.button-38:active {
+   transform: scale(0.95);
+}
+/* -----------------login button------------------------------------------------------------------------------------- */
